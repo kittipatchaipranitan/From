@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const Foot = styled.div`
@@ -7,21 +6,15 @@ const Foot = styled.div`
     padding: 0;
     box-sizing: border-box;
     }
-`
-const Fobackgroud = styled.div`
     padding: 1rem;
     background-color: rgba(255,152,67,255);
     margin-top: 50px;
-`
-const Footercon = styled.div`
-    display: flex;
-`
-const Container = styled.div`
-    max-width: 1400px;
-    margin: auto;
+    
 `
 
-const Footerinfo = styled.div`
+const FooterInfo = styled.div`
+    max-width: 1400px;
+    margin: auto;
     h3{
         color: white;
         font-size: 30px;
@@ -36,21 +29,21 @@ const Footerinfo = styled.div`
 
 `
 
+const Contact = () => (
+    <Foot>
+        <FooterInfo>
+            <h3>KITTIPAT CHAIPRANITAN</h3>
+            <p>132/40, Moo 3, Bang Phut, Pak Kret, Nonthaburi, 11120,</p>
+            <p>Tel : 099 951 3694 Email : s6404062620176@email.kmutnb.ac.th</p>
+        </FooterInfo>
+    </Foot>
+);
+
+
+
 function Footer() {
     return (
-        <Foot>
-            <Fobackgroud>
-                <Footercon>
-                    <Container>
-                        <Footerinfo>
-                            <h3>KITTIPAT CHAIPRANITAN</h3>
-                            <p>132/40, Moo 3, Bang Phut, Pak Kret, Nonthaburi, 11120,</p>
-                            <p>Tel : 099 951 3694 Email : s6404062620176@email.kmutnb.ac.th</p>
-                        </Footerinfo>
-                    </Container>
-                </Footercon>
-            </Fobackgroud>
-        </Foot>
+        <Contact />
     )
 }
 

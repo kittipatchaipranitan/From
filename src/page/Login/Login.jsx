@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, Field } from 'react-final-form';
 import { Body, Wrapper, Input, Requied, Button, Word, Box } from './LoginStyled'
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
-    const navigate = useNavigate();
 
+    const navigate = useNavigate();
+    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
     const onSubmit = async (values) => {
-        if(values.username == "Kittipat" && values.password == "Chaipranitan"){
+        await sleep(300)
+        if (values.username == "Kittipat" && values.password == "Chaipranitan") {
             console.log("Pass")
-            navigate("/Navbar")
+            navigate("/App")
+            window.alert('Login Success')
         }
-        else{
+        else {
+            window.alert('Login Fail')
             console.log("Fall")
         }
     }
@@ -49,7 +53,7 @@ const Login = () => {
                                 </Field>
                             </Box>
 
-                            <Button type="submit">Submit</Button>
+                            <Button type="submit" >Submit</Button>
 
                         </form>
                     )}
